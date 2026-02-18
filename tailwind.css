@@ -11,36 +11,34 @@
   --animate-spin: spin 1s linear infinite;
 }
 
-/* Original background image, full bleed to the very bottom; only the nav bar has a different color */
+/* Background: fixed layer so it always fills the viewport when resizing; only nav bar has a different color */
 html {
   min-height: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
+  height: 100%;
   overflow-x: hidden;
+}
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #f5f6f8;
+  position: relative;
+}
+/* Fixed background layer – always covers full viewport when you resize or minimize */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
   background-color: #f5f6f8;
   background-image: url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1.png);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
-}
-body {
-  min-height: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background-color: transparent;
-  background-image: url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1.png);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+  transform: translateZ(0); /* own compositor layer for smoother scroll */
 }
 #app {
   min-height: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
   padding-bottom: max(2rem, env(safe-area-inset-bottom, 1rem));
   overflow-x: hidden;
   overflow-y: visible;
