@@ -1,0 +1,1 @@
+export { ApplicationsIntroSection } from "./ApplicationsIntroSection";

@@ -1,0 +1,1 @@
+export { HyfixMainPage } from "./HyfixMainPage";
