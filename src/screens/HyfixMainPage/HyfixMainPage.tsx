@@ -18,7 +18,7 @@ import { PublicSectorSecurityDronesSection } from "./sections/PublicSectorSecuri
 export const HyfixMainPage = (): JSX.Element => {
   return (
     <div
-      className="overflow-hidden bg-[url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1.png)] bg-cover bg-center bg-no-repeat bg-fixed w-full min-w-0 min-h-screen relative"
+      className="overflow-hidden bg-[url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1.png)] bg-cover bg-center bg-no-repeat w-full min-w-0 min-h-screen relative"
       style={{ backgroundAttachment: 'fixed', backgroundSize: 'cover' }}
       data-model-id="209:7"
     >
