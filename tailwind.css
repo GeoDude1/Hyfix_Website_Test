@@ -12,21 +12,30 @@
 }
 
 /* Mobile: prevent content cut-off and horizontal scroll */
-html, body {
-  overflow-x: hidden;
-  /* Background reaches bottom on mobile: same as main, extends with content */
+html {
   min-height: 100%;
   min-height: 100dvh;
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+  /* Background reaches all the way to the bottom on mobile and desktop */
+  min-height: 100%;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
   background-image: url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-color: #f0f1f3; /* fallback if image is slow / matches layout */
 }
 #app {
   padding-bottom: max(1rem, env(safe-area-inset-bottom, 0));
   overflow-x: hidden;
   min-height: 100%;
   min-height: 100dvh;
+  min-height: -webkit-fill-available;
 }
 
 .animate-fade-in {

@@ -2,7 +2,7 @@ export const HeroImageSection = (): JSX.Element => {
   return (
     <section className="relative w-full overflow-hidden">
       {/* Video Container */}
-      <div className="relative w-full bg-neutral-900" style={{ paddingTop: '56.25%' }}>
+      <div className="relative w-full bg-transparent" style={{ paddingTop: '56.25%' }}>
         <video
           className="absolute top-0 left-0 w-full h-full object-cover translate-y-[-1rem]"
           autoPlay
