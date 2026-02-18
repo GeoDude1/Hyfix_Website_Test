@@ -11,6 +11,15 @@
   --animate-spin: spin 1s linear infinite;
 }
 
+/* Mobile: prevent content cut-off and horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+#app {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom, 0));
+  overflow-x: hidden;
+}
+
 .animate-fade-in {
   animation: fade-in 0.8s var(--animation-delay, 0s) cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }

@@ -93,12 +93,12 @@ export const NavigationWrapperSection = (): JSX.Element => {
                 </Button>
               </div>
             </div>
-            <div className="flex items-center justify-center gap-3 pb-2">
+            <div className="flex items-center justify-center gap-6 sm:gap-8 pb-2">
               {navigationItems.map((item) => (
                 <Link
                   key={item.label}
                   to={item.path}
-                  className={`[font-family:'Goli-Medium',Helvetica] text-sm tracking-[0] leading-[normal] transition-all hover:text-[#43aaff] cursor-pointer ${
+                  className={`min-h-[44px] min-w-[44px] flex items-center justify-center py-2 px-1 [font-family:'Goli-Medium',Helvetica] text-sm tracking-[0] leading-[normal] transition-all hover:text-[#43aaff] cursor-pointer ${
                     location.pathname === item.path ? "font-bold text-black" : "font-medium text-black"
                   }`}
                 >

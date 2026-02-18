@@ -22,27 +22,31 @@ export const ChipTechnologySection = (): JSX.Element => {
             A Chip Built for Precision and Resilience
           </h2>
 
-          {/* Centered content container - divider at true center, content on each side */}
+          {/* Centered content container - stacked on mobile, side-by-side from md */}
           <div className="flex flex-col items-center gap-4 md:gap-5 w-full translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-            <div className="relative w-full flex items-center min-h-[200px]">
-              {/* Left half: chip image, right-aligned toward center */}
-              <div className="flex-1 flex justify-end items-center pr-12 lg:pr-16 xl:pr-20">
+            <div className="relative w-full flex flex-col md:flex-row items-center md:items-stretch min-h-0 md:min-h-[200px] gap-6 md:gap-0">
+              {/* Left half: chip image - centered on mobile, right-aligned from md */}
+              <div className="flex-1 flex justify-center md:justify-end items-center w-full md:pr-12 lg:pr-16 xl:pr-20">
                 <img
-                  className="w-[280px] h-auto object-contain"
+                  className="w-[200px] sm:w-[240px] md:w-[280px] h-auto object-contain"
                   alt="Chip dime"
                   src="https://c.animaapp.com/mlqxi4snA5QXFn/img/h1-chip-dime-v04-1.png"
                 />
               </div>
 
-              {/* Grey divider - fixed at exact horizontal center */}
+              {/* Grey divider - horizontal on mobile, vertical from md */}
               <div
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[3px] h-[180px] bg-[#c7c7c7] flex-shrink-0"
+                className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[3px] h-[180px] bg-[#c7c7c7] flex-shrink-0"
+                aria-hidden
+              />
+              <div
+                className="md:hidden w-full max-w-[120px] h-[3px] bg-[#c7c7c7] flex-shrink-0"
                 aria-hidden
               />
 
-              {/* Right half: list, left-aligned from center */}
-              <div className="flex-1 flex justify-start items-center pl-12 lg:pl-16 xl:pl-20">
-                <ul className="flex flex-col gap-3 [font-family:'Hind',Helvetica] font-medium text-black text-[24px] tracking-[0] leading-normal list-disc pl-5">
+              {/* Right half: list - centered on mobile, left-aligned from md */}
+              <div className="flex-1 flex justify-center md:justify-start items-center w-full md:pl-12 lg:pl-16 xl:pl-20 px-4">
+                <ul className="flex flex-col gap-2 sm:gap-3 [font-family:'Hind',Helvetica] font-medium text-black text-lg sm:text-xl md:text-[24px] tracking-[0] leading-normal list-disc pl-5 text-left">
                   {chipFeatures.map((feature, index) => (
                     <li key={index}>{feature}</li>
                   ))}
