@@ -10,7 +10,7 @@ export const HeroImageSection = (): JSX.Element => {
           muted
           playsInline
         >
-          <source src="/drone-seethrough-02-1.webm" type="video/webm" />
+          <source src={`${import.meta.env.BASE_URL}drone-seethrough-02-1.webm`} type="video/webm" />
         </video>
       </div>
 
