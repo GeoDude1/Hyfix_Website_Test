@@ -4,7 +4,7 @@ export const HeroImageSection = (): JSX.Element => {
       {/* Video Container */}
       <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]"
+          className="absolute top-0 left-0 w-full h-full object-cover translate-y-[-1rem]"
           autoPlay
           loop
           muted
