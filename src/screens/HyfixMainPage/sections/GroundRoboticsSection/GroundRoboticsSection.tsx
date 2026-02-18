@@ -11,12 +11,12 @@ export const GroundRoboticsSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="relative w-full py-0.5">
-      <div className="w-full max-w-[1920px] mx-auto px-4 mb-0.5">
+    <section className="relative w-full py-3 md:py-4">
+      <div className="w-full max-w-[1920px] mx-auto px-4 mb-2 md:mb-0.5">
         <SectionDivider />
       </div>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 py-2 md:py-0">
         <Grid benefits={benefits} />
       </div>
     </section>
@@ -27,10 +27,10 @@ const Grid = ({ benefits }: { benefits: string[] }) => {
   const { ref, inView } = useInView({ threshold: 0.15 });
 
   return (
-    <div ref={ref as any} className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
+    <div ref={ref as any} className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8 items-center max-w-7xl mx-auto">
       <div className={`${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"} transition-all duration-700 ease-out flex justify-center items-center`}>
         <img
-          className="w-[320px] h-[320px] md:w-[420px] md:h-[420px] lg:w-[480px] lg:h-[480px] object-contain"
+          className="w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] md:w-[420px] md:h-[420px] lg:w-[480px] lg:h-[480px] object-contain"
           alt="Verde AI mower"
           src="https://c.animaapp.com/mlqxi4snA5QXFn/img/verde-ai-mower.png"
         />

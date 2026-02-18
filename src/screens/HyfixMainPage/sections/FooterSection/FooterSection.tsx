@@ -15,15 +15,13 @@ const legalLinks = [
 
 export const FooterSection = (): JSX.Element => {
   return (
-    <footer className="relative w-full bg-transparent">
-      <div className="relative w-full h-[310px] bg-[linear-gradient(180deg,rgba(255,255,255,0.15)_0%,transparent_100%)]">
-        <div className="absolute top-0 left-0 w-full">
-          <div className="w-full max-w-[1920px] mx-auto px-4">
-            <SectionDivider />
-          </div>
+    <footer className="relative w-full bg-transparent" style={{ paddingBottom: 'max(2rem, env(safe-area-inset-bottom))' }}>
+      <div className="relative w-full bg-transparent py-5 pb-8 md:py-10 md:pb-12">
+        <div className="w-full max-w-[1920px] mx-auto px-4 mb-6">
+          <SectionDivider />
         </div>
 
-        <div className="flex flex-col items-center justify-center h-full gap-6 px-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
+        <div className="flex flex-col items-center justify-center gap-4 md:gap-6 px-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
           <img
             className="w-[257px] h-[79px] object-contain"
             alt="HYFIX Logo"

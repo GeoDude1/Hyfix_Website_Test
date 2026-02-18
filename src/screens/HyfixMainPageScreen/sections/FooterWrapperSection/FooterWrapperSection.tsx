@@ -15,8 +15,8 @@ const legalLinks = [
 
 export const FooterWrapperSection = (): JSX.Element => {
   return (
-    <footer className="relative w-full bg-transparent translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-      <div className="w-full bg-[linear-gradient(180deg,rgba(255,255,255,0.15)_0%,transparent_100%)] py-12">
+    <footer className="relative w-full bg-transparent translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]" style={{ paddingBottom: 'max(2rem, env(safe-area-inset-bottom))' }}>
+      <div className="w-full bg-transparent py-12">
         <div className="w-full max-w-[1920px] mx-auto px-4 mb-10">
           <SectionDivider />
         </div>

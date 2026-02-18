@@ -11,31 +11,40 @@
   --animate-spin: spin 1s linear infinite;
 }
 
-/* Mobile: prevent content cut-off and horizontal scroll */
+/* Original background image, full bleed to the very bottom; only the nav bar has a different color */
 html {
   min-height: 100%;
+  min-height: 100vh;
   min-height: 100dvh;
   overflow-x: hidden;
-}
-body {
-  overflow-x: hidden;
-  /* Background reaches all the way to the bottom on mobile and desktop */
-  min-height: 100%;
-  min-height: 100dvh;
-  min-height: -webkit-fill-available;
+  background-color: #f5f6f8;
   background-image: url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1.png);
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-color: #f0f1f3; /* fallback if image is slow / matches layout */
+}
+body {
+  min-height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: transparent;
+  background-image: url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 #app {
-  padding-bottom: max(1rem, env(safe-area-inset-bottom, 0));
-  overflow-x: hidden;
   min-height: 100%;
+  min-height: 100vh;
   min-height: 100dvh;
-  min-height: -webkit-fill-available;
+  padding-bottom: max(2rem, env(safe-area-inset-bottom, 1rem));
+  overflow-x: hidden;
+  overflow-y: visible;
+  background: transparent;
 }
 
 .animate-fade-in {

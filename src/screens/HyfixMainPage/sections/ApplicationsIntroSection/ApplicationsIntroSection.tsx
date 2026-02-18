@@ -4,8 +4,8 @@ export const ApplicationsIntroSection = (): JSX.Element => {
   const { ref, inView } = useInView({ threshold: 0.2, rootMargin: "-10%" });
 
   return (
-    <section className="w-full py-12 px-4">
-      <div className="max-w-6xl mx-auto text-center space-y-4">
+    <section className="w-full py-5 md:py-8 lg:py-12 px-4">
+      <div className="max-w-6xl mx-auto text-center space-y-3 md:space-y-4">
         <h2
           ref={ref as any}
           className={`[font-family:'Hind',Helvetica] font-bold text-[#030303] text-3xl md:text-4xl tracking-[0] leading-normal ${inView ? "animate-fade-in opacity-100 translate-y-0" : "translate-y-[-1rem] opacity-0"}`}

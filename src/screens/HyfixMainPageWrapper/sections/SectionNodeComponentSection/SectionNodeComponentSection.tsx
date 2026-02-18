@@ -17,8 +17,8 @@ const legalLinks = [
 
 export const SectionNodeComponentSection = (): JSX.Element => {
   return (
-    <footer className="relative w-full bg-transparent">
-      <div className="relative w-full bg-[linear-gradient(180deg,rgba(255,255,255,0.15)_0%,transparent_100%)]">
+    <footer className="relative w-full bg-transparent" style={{ paddingBottom: 'max(2rem, env(safe-area-inset-bottom))' }}>
+      <div className="relative w-full bg-transparent">
         <div className="w-full max-w-[1920px] mx-auto px-4">
           <SectionDivider />
         </div>

@@ -1,11 +1,11 @@
 /**
  * Single shared horizontal section divider.
- * Solid line so it looks identical on every page and background.
+ * Full-width line across the whole page.
  */
 export const SectionDivider = (): JSX.Element => (
-  <div className="w-full flex-shrink-0 flex justify-center">
+  <div className="w-full flex-shrink-0">
     <div
-      className="w-full max-w-[1100px] h-[2px] bg-[#d1d5db] opacity-70"
+      className="w-full h-[2px] bg-[#d1d5db] opacity-70 min-w-full"
       aria-hidden
     />
   </div>

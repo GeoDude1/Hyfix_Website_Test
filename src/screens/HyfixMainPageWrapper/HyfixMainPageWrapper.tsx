@@ -30,8 +30,7 @@ const investorLogos = [
 export const HyfixMainPageWrapper = (): JSX.Element => {
   return (
     <div
-      className="overflow-hidden bg-[url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1-1.png)] bg-cover bg-center bg-no-repeat w-full min-w-0 min-h-screen relative"
-      style={{ backgroundAttachment: 'fixed', backgroundSize: 'cover' }}
+      className="overflow-x-hidden bg-transparent w-full min-w-0 min-h-screen relative flex-1"
       data-model-id="207:420"
     >
       <section className="w-full relative [--animation-delay:0ms] translate-y-[-1rem] animate-fade-in opacity-0">
