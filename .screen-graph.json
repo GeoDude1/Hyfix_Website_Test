@@ -78,15 +78,15 @@
       }
     },
     {
-      "id": "src\\screens\\HyfixMainPageScreen\\sections\\HyfixBrandingSection\\HyfixBrandingSection.tsx:57:10-to-src\\screens\\HyfixMainPageWrapper\\HyfixMainPageWrapper.tsx",
+      "id": "src\\screens\\HyfixMainPageScreen\\sections\\HyfixBrandingSection\\HyfixBrandingSection.tsx:71:10-to-src\\screens\\HyfixMainPageWrapper\\HyfixMainPageWrapper.tsx",
       "source": "src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "target": "src\\screens\\HyfixMainPageWrapper\\HyfixMainPageWrapper.tsx",
       "data": {
         "viaRoute": "/hyfixu95mainu95page-1-white-about",
         "trigger": {
           "element": "<Link to=\"/hyfixu95mainu95page-1-white-about\">\n            <Button \n              className=\"h-auto px-4 md:px-5 py-[6px] rounded-[5px] border border-[#43aaff] bg-[linear-gradient(180deg,rgba(98,183,243,1)_0%,rgba(32,122,219,1)_100%)] [font-family:'Goli-Medium',Helvetica] font-medium text-white text-base md:text-lg tracking-[0] leading-[normal] hover:opacity-90 transition-opacity\"\n            >\n              About HYFIX\n            </Button>\n          </Link>",
-          "line": 57,
-          "endLine": 63,
+          "line": 71,
+          "endLine": 77,
           "column": 10,
           "endColumn": 17,
           "sourceFile": "src\\screens\\HyfixMainPageScreen\\sections\\HyfixBrandingSection\\HyfixBrandingSection.tsx"

@@ -1,5 +1,6 @@
 import { Button } from "../../../../components/ui/button";
 import { SectionDivider } from "../../../../components/ui/section-divider";
+import { useInView } from "../../../../hooks/useInView";
 
 const chipFeatures = [
   "Application CPU",
@@ -8,6 +9,25 @@ const chipFeatures = [
   "Radio Processor",
   "Security Encryption",
 ];
+
+const BulletList = ({ items }: { items: string[] }) => {
+  const { ref, inView } = useInView({ threshold: 0.2 });
+  return (
+    <div ref={ref as any} className="flex-1 flex justify-center md:justify-start items-center w-full md:pl-12 lg:pl-16 xl:pl-20 px-4">
+      <ul className="flex flex-col gap-2 sm:gap-3 [font-family:'Hind',Helvetica] font-medium text-black text-lg sm:text-xl md:text-[24px] tracking-[0] leading-normal list-disc pl-5 text-left">
+        {items.map((feature, index) => (
+          <li
+            key={index}
+            className={inView ? "animate-bullet-in opacity-0" : "opacity-0"}
+            style={inView ? { animationDelay: `${index * 80}ms` } : undefined}
+          >
+            {feature}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 export const ChipTechnologySection = (): JSX.Element => {
   return (
@@ -45,13 +65,7 @@ export const ChipTechnologySection = (): JSX.Element => {
               />
 
               {/* Right half: list - centered on mobile, left-aligned from md */}
-              <div className="flex-1 flex justify-center md:justify-start items-center w-full md:pl-12 lg:pl-16 xl:pl-20 px-4">
-                <ul className="flex flex-col gap-2 sm:gap-3 [font-family:'Hind',Helvetica] font-medium text-black text-lg sm:text-xl md:text-[24px] tracking-[0] leading-normal list-disc pl-5 text-left">
-                  {chipFeatures.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
-                </ul>
-              </div>
+              <BulletList items={chipFeatures} />
             </div>
 
             {/* Button centered below */}
