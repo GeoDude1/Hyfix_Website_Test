@@ -27,5 +27,10 @@ const router = createBrowserRouter([
 ]);
 
 export const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <div className="page-backdrop" aria-hidden="true" />
+      <RouterProvider router={router} />
+    </>
+  );
 };

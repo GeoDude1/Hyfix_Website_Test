@@ -9,11 +9,9 @@ export const HeroImageSection = (): JSX.Element => {
           loop
           muted
           playsInline
-          preload="auto"
         >
-          {/* MP4 first for Safari/iOS; WebM for Chrome/Firefox */}
-          <source src={`${import.meta.env.BASE_URL}drone-seethrough-02-1.mp4`} type="video/mp4" />
           <source src={`${import.meta.env.BASE_URL}drone-seethrough-02-1.webm`} type="video/webm" />
+          <source src={`${import.meta.env.BASE_URL}drone-seethrough-02-1.mov`} type="video/quicktime" />
         </video>
       </div>
 

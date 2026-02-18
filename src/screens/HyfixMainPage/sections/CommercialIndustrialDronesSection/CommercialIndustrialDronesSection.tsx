@@ -11,12 +11,12 @@ export const CommercialIndustrialDronesSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="relative w-full py-3 md:py-4 px-4">
+    <section className="relative w-full py-3 md:py-4">
       <div className="w-full max-w-[1920px] mx-auto px-4 mb-2 md:mb-0.5">
         <SectionDivider />
       </div>
 
-      <div className="container mx-auto max-w-7xl py-2 md:py-0">
+      <div className="container mx-auto px-4 max-w-7xl py-2 md:py-0">
         <Grid benefits={benefits} />
       </div>
     </section>
@@ -37,12 +37,12 @@ const Grid = ({ benefits }: { benefits: string[] }) => {
       </div>
 
       <div className={`${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"} transition-all duration-700 ease-out space-y-4`}>
-        <h2 className="[font-family:'Hind',Helvetica] font-bold text-black text-2xl md:text-3xl leading-normal whitespace-nowrap">
+        <h2 className="[font-family:'Hind',Helvetica] font-bold text-black text-2xl md:text-3xl leading-normal">
           Public-sector and Security Drones
         </h2>
 
         <div className="[font-family:'Hind',Helvetica] text-xl md:text-2xl leading-normal">
-          <p className="font-bold text-black mb-3 whitespace-nowrap">Benefits:</p>
+          <p className="font-bold text-black mb-3">Benefits:</p>
 
           <AnimatedList items={benefits.map((b) => b)} baseDelay={200} />
         </div>

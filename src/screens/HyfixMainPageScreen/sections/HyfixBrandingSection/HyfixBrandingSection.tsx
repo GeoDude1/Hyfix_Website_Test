@@ -1,6 +1,7 @@
 import { Button } from "../../../../components/ui/button";
 import { SectionDivider } from "../../../../components/ui/section-divider";
 import { Link } from "react-router-dom";
+import { useInView } from "../../../../hooks/useInView";
 
 const features = [
   "U.S.-designed and manufactured",
@@ -8,6 +9,25 @@ const features = [
   "High-volume mature process node",
   "NDAA compliant",
 ];
+
+const BulletList = ({ items }: { items: string[] }) => {
+  const { ref, inView } = useInView({ threshold: 0.2 });
+  return (
+    <div ref={ref as any} className="flex-1 flex justify-center md:justify-start items-center w-full md:pl-12 lg:pl-16 xl:pl-20 px-4">
+      <ul className="flex flex-col gap-2 sm:gap-3 md:gap-4 [font-family:'Hind',Helvetica] font-medium text-black text-base md:text-lg lg:text-xl tracking-[0] leading-normal list-disc pl-5 break-words text-left">
+        {items.map((feature, index) => (
+          <li
+            key={index}
+            className={inView ? "animate-bullet-in opacity-0" : "opacity-0"}
+            style={inView ? { animationDelay: `${index * 80}ms` } : undefined}
+          >
+            {feature}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 export const HyfixBrandingSection = (): JSX.Element => {
   return (
@@ -44,13 +64,7 @@ export const HyfixBrandingSection = (): JSX.Element => {
             />
 
             {/* Right half: list - centered on mobile */}
-            <div className="flex-1 flex justify-center md:justify-start items-center w-full md:pl-12 lg:pl-16 xl:pl-20 px-4">
-              <ul className="flex flex-col gap-2 sm:gap-3 md:gap-4 [font-family:'Hind',Helvetica] font-medium text-black text-base md:text-lg lg:text-xl tracking-[0] leading-normal list-disc pl-5 break-words text-left">
-                {features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
-            </div>
+            <BulletList items={features} />
           </div>
 
           {/* Button centered below */}

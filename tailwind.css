@@ -11,11 +11,22 @@
   --animate-spin: spin 1s linear infinite;
 }
 
-/* Background: fixed layer so it always fills the viewport when resizing; only nav bar has a different color */
+/* Remove default margins that cause gaps (especially on mobile) */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Background: full bleed on desktop and mobile */
 html {
   min-height: 100%;
   height: 100%;
   overflow-x: hidden;
+  background-color: #f5f6f8;
+  background-image: url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 body {
   min-height: 100%;
@@ -23,21 +34,78 @@ body {
   overflow-y: auto;
   background-color: #f5f6f8;
   position: relative;
+  background-image: url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-/* Fixed background layer – always covers full viewport when you resize or minimize */
+/* Fixed background layer – backup so background always shows (desktop + mobile) */
 body::before {
   content: "";
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: -1;
   background-color: #f5f6f8;
   background-image: url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1.png);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  transform: translateZ(0); /* own compositor layer for smoother scroll */
+  transform: translateZ(0);
 }
+/* Mobile: follow best practices – no fixed attachment, cover + scroll, full viewport, no margin gaps */
+@media (max-width: 1024px) {
+  html {
+    min-height: 100%;
+    min-height: 100vh;
+  }
+  body {
+    width: 100%;
+    min-height: 100%;
+    min-height: 100vh;
+    background-attachment: scroll;
+    background-size: cover;
+    background-color: #f5f6f8;
+  }
+  body::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -50vh;
+    min-height: calc(100% + 50vh);
+    width: 100%;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+}
+/* In-app full-bleed background layer – real DOM element so it never leaves a white strip at the bottom */
+.page-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 300vh;
+  z-index: -1;
+  background-color: #f5f6f8;
+  background-image: url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+@media (max-width: 1024px) {
+  .page-backdrop {
+    min-height: 400vh;
+  }
+}
+
 #app {
+  position: relative;
+  width: 100%;
   min-height: 100%;
   padding-bottom: max(2rem, env(safe-area-inset-bottom, 1rem));
   overflow-x: hidden;
@@ -163,6 +231,21 @@ body::before {
   }
 }
 
+/* Staggered bullet-point animation for a more modern feel */
+@keyframes bullet-in {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) translateX(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
+.animate-bullet-in {
+  animation: bullet-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
 @keyframes shimmer {
   0%,
   90%,
@@ -274,7 +357,17 @@ body::before {
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    /* Do not use bg-background here – it’s white and causes a white strip at the bottom; page background is set above */
   }
+}
+
+/* Override any white from Tailwind base so the page background always shows to the bottom */
+body {
+  background-color: #f5f6f8 !important;
+  background-image: url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1.png) !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
 }
