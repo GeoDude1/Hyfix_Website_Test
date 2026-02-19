@@ -13,7 +13,7 @@ export const HeroImageSection = (): JSX.Element => {
         >
           {/* Transparent: WebM (VP9+alpha) for Chrome/Firefox/Edge; .mov (with alpha) fallback for Safari/iOS. */}
           <source src={`${import.meta.env.BASE_URL}drone-seethrough-02-1.webm`} type="video/webm" />
-          <source src={`${import.meta.env.BASE_URL}drone-seethrough-02-1.mov`} type="video/quicktime" />
+          <source src={`${import.meta.env.BASE_URL}drone_ios.mov`} type="video/quicktime" />
         </video>
       </div>
 
