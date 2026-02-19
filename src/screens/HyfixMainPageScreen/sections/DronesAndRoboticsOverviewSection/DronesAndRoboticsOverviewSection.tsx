@@ -56,7 +56,7 @@ export const DronesAndRoboticsOverviewSection = (): JSX.Element => {
         </div>
 
         <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1200ms] flex justify-center">
-          <Link to="/hyfixu95mainu95page-1-white-application">
+          <Link to="/applications">
             <Button 
               className="h-auto w-auto px-5 md:px-6 py-[6px] rounded-[5px] border border-[#43aaff] bg-[linear-gradient(180deg,rgba(98,183,243,1)_0%,rgba(32,122,219,1)_100%)] text-white [font-family:'Goli-Medium',Helvetica] font-medium text-base md:text-lg tracking-[0] leading-[normal] hover:opacity-90 transition-opacity"
             >

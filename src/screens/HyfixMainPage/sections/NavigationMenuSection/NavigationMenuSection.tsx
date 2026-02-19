@@ -3,18 +3,9 @@ import { Button } from "../../../../components/ui/button";
 import { SectionDivider } from "../../../../components/ui/section-divider";
 
 const navigationItems = [
-  {
-    label: "Home",
-    path: "/hyfixu95mainu95page-1-white-homeu95v2",
-  },
-  {
-    label: "About",
-    path: "/hyfixu95mainu95page-1-white-about",
-  },
-  {
-    label: "Applications",
-    path: "/hyfixu95mainu95page-1-white-application",
-  },
+  { label: "Home", path: "/home" },
+  { label: "About", path: "/about" },
+  { label: "Applications", path: "/applications" },
 ];
 
 export const NavigationMenuSection = (): JSX.Element => {
@@ -27,7 +18,7 @@ export const NavigationMenuSection = (): JSX.Element => {
           <div className="grid grid-cols-3 items-center h-full">
             {/* Logo - Left */}
             <div className="flex justify-start">
-              <Link to="/hyfixu95mainu95page-1-white-homeu95v2">
+              <Link to="/home">
                 <img
                   className="w-[180px] h-[55px] object-contain translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms] cursor-pointer hover:opacity-80 transition-opacity"
                   alt="Final FILE HYFIX"

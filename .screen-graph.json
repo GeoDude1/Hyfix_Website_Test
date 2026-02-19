@@ -5,6 +5,7 @@
       "label": "HyfixMainPageScreen",
       "routes": [
         "/",
+        "/home",
         "/*",
         "/hyfixu95mainu95page-1-white-homeu95v2"
       ],
@@ -12,33 +13,35 @@
       "isRoot": true
     },
     {
-      "id": "src/screens/HyfixMainPage/HyfixMainPage.tsx",
-      "label": "HyfixMainPage",
-      "routes": [
-        "/hyfixu95mainu95page-1-white-application"
-      ],
-      "dataModelId": "209:7"
-    },
-    {
       "id": "src/screens/HyfixMainPageWrapper/HyfixMainPageWrapper.tsx",
       "label": "HyfixMainPageWrapper",
       "routes": [
+        "/about",
         "/hyfixu95mainu95page-1-white-about"
       ],
       "dataModelId": "207:420"
+    },
+    {
+      "id": "src/screens/HyfixMainPage/HyfixMainPage.tsx",
+      "label": "HyfixMainPage",
+      "routes": [
+        "/applications",
+        "/hyfixu95mainu95page-1-white-application"
+      ],
+      "dataModelId": "209:7"
     }
   ],
   "edges": [
     {
-      "id": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx:30:14-to-src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
+      "id": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx:21:14-to-src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "source": "src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "target": "src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "data": {
-        "viaRoute": "/hyfixu95mainu95page-1-white-homeu95v2",
+        "viaRoute": "/home",
         "trigger": {
-          "element": "<Link to=\"/hyfixu95mainu95page-1-white-homeu95v2\">\r\n                <img\r\n                  className=\"w-[140px] md:w-[160px] lg:w-[180px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\r\n                  alt=\"Final FILE HYFIX\"\r\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\r\n                />\r\n              </Link>",
-          "line": 30,
-          "endLine": 36,
+          "element": "<Link to=\"/home\">\r\n                <img\r\n                  className=\"w-[140px] md:w-[160px] lg:w-[180px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\r\n                  alt=\"Final FILE HYFIX\"\r\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\r\n                />\r\n              </Link>",
+          "line": 21,
+          "endLine": 27,
           "column": 14,
           "endColumn": 21,
           "sourceFile": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx"
@@ -46,15 +49,15 @@
       }
     },
     {
-      "id": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx:74:14-to-src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
+      "id": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx:65:14-to-src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "source": "src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "target": "src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "data": {
-        "viaRoute": "/hyfixu95mainu95page-1-white-homeu95v2",
+        "viaRoute": "/home",
         "trigger": {
-          "element": "<Link to=\"/hyfixu95mainu95page-1-white-homeu95v2\" className=\"flex-shrink-0\">\r\n                <img\r\n                  className=\"w-[120px] sm:w-[140px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\r\n                  alt=\"Final FILE HYFIX\"\r\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\r\n                />\r\n              </Link>",
-          "line": 74,
-          "endLine": 80,
+          "element": "<Link to=\"/home\" className=\"flex-shrink-0\">\r\n                <img\r\n                  className=\"w-[120px] sm:w-[140px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\r\n                  alt=\"Final FILE HYFIX\"\r\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\r\n                />\r\n              </Link>",
+          "line": 65,
+          "endLine": 71,
           "column": 14,
           "endColumn": 21,
           "sourceFile": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx"
@@ -66,9 +69,9 @@
       "source": "src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "target": "src\\screens\\HyfixMainPage\\HyfixMainPage.tsx",
       "data": {
-        "viaRoute": "/hyfixu95mainu95page-1-white-application",
+        "viaRoute": "/applications",
         "trigger": {
-          "element": "<Link to=\"/hyfixu95mainu95page-1-white-application\">\n            <Button \n              className=\"h-auto w-auto px-5 md:px-6 py-[6px] rounded-[5px] border border-[#43aaff] bg-[linear-gradient(180deg,rgba(98,183,243,1)_0%,rgba(32,122,219,1)_100%)] text-white [font-family:'Goli-Medium',Helvetica] font-medium text-base md:text-lg tracking-[0] leading-[normal] hover:opacity-90 transition-opacity\"\n            >\n              Applications\n            </Button>\n          </Link>",
+          "element": "<Link to=\"/applications\">\n            <Button \n              className=\"h-auto w-auto px-5 md:px-6 py-[6px] rounded-[5px] border border-[#43aaff] bg-[linear-gradient(180deg,rgba(98,183,243,1)_0%,rgba(32,122,219,1)_100%)] text-white [font-family:'Goli-Medium',Helvetica] font-medium text-base md:text-lg tracking-[0] leading-[normal] hover:opacity-90 transition-opacity\"\n            >\n              Applications\n            </Button>\n          </Link>",
           "line": 59,
           "endLine": 65,
           "column": 10,
@@ -82,9 +85,9 @@
       "source": "src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "target": "src\\screens\\HyfixMainPageWrapper\\HyfixMainPageWrapper.tsx",
       "data": {
-        "viaRoute": "/hyfixu95mainu95page-1-white-about",
+        "viaRoute": "/about",
         "trigger": {
-          "element": "<Link to=\"/hyfixu95mainu95page-1-white-about\">\r\n            <Button \r\n              className=\"h-auto px-4 md:px-5 py-[6px] rounded-[5px] border border-[#43aaff] bg-[linear-gradient(180deg,rgba(98,183,243,1)_0%,rgba(32,122,219,1)_100%)] [font-family:'Goli-Medium',Helvetica] font-medium text-white text-base md:text-lg tracking-[0] leading-[normal] hover:opacity-90 transition-opacity\"\r\n            >\r\n              About HYFIX\r\n            </Button>\r\n          </Link>",
+          "element": "<Link to=\"/about\">\r\n            <Button \r\n              className=\"h-auto px-4 md:px-5 py-[6px] rounded-[5px] border border-[#43aaff] bg-[linear-gradient(180deg,rgba(98,183,243,1)_0%,rgba(32,122,219,1)_100%)] [font-family:'Goli-Medium',Helvetica] font-medium text-white text-base md:text-lg tracking-[0] leading-[normal] hover:opacity-90 transition-opacity\"\r\n            >\r\n              About HYFIX\r\n            </Button>\r\n          </Link>",
           "line": 71,
           "endLine": 77,
           "column": 10,
@@ -94,15 +97,15 @@
       }
     },
     {
-      "id": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx:30:14-to-src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
+      "id": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx:21:14-to-src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "source": "src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "target": "src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "data": {
-        "viaRoute": "/hyfixu95mainu95page-1-white-homeu95v2",
+        "viaRoute": "/home",
         "trigger": {
-          "element": "<Link to=\"/hyfixu95mainu95page-1-white-homeu95v2\">\r\n                <img\r\n                  className=\"w-[140px] md:w-[160px] lg:w-[180px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\r\n                  alt=\"Final FILE HYFIX\"\r\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\r\n                />\r\n              </Link>",
-          "line": 30,
-          "endLine": 36,
+          "element": "<Link to=\"/home\">\r\n                <img\r\n                  className=\"w-[140px] md:w-[160px] lg:w-[180px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\r\n                  alt=\"Final FILE HYFIX\"\r\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\r\n                />\r\n              </Link>",
+          "line": 21,
+          "endLine": 27,
           "column": 14,
           "endColumn": 21,
           "sourceFile": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx"
@@ -110,15 +113,15 @@
       }
     },
     {
-      "id": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx:74:14-to-src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
+      "id": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx:65:14-to-src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "source": "src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "target": "src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "data": {
-        "viaRoute": "/hyfixu95mainu95page-1-white-homeu95v2",
+        "viaRoute": "/home",
         "trigger": {
-          "element": "<Link to=\"/hyfixu95mainu95page-1-white-homeu95v2\" className=\"flex-shrink-0\">\r\n                <img\r\n                  className=\"w-[120px] sm:w-[140px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\r\n                  alt=\"Final FILE HYFIX\"\r\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\r\n                />\r\n              </Link>",
-          "line": 74,
-          "endLine": 80,
+          "element": "<Link to=\"/home\" className=\"flex-shrink-0\">\r\n                <img\r\n                  className=\"w-[120px] sm:w-[140px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\r\n                  alt=\"Final FILE HYFIX\"\r\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\r\n                />\r\n              </Link>",
+          "line": 65,
+          "endLine": 71,
           "column": 14,
           "endColumn": 21,
           "sourceFile": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx"
@@ -126,15 +129,15 @@
       }
     },
     {
-      "id": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx:30:14-to-src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
+      "id": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx:21:14-to-src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "source": "src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "target": "src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "data": {
-        "viaRoute": "/hyfixu95mainu95page-1-white-homeu95v2",
+        "viaRoute": "/home",
         "trigger": {
-          "element": "<Link to=\"/hyfixu95mainu95page-1-white-homeu95v2\">\r\n                <img\r\n                  className=\"w-[140px] md:w-[160px] lg:w-[180px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\r\n                  alt=\"Final FILE HYFIX\"\r\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\r\n                />\r\n              </Link>",
-          "line": 30,
-          "endLine": 36,
+          "element": "<Link to=\"/home\">\r\n                <img\r\n                  className=\"w-[140px] md:w-[160px] lg:w-[180px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\r\n                  alt=\"Final FILE HYFIX\"\r\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\r\n                />\r\n              </Link>",
+          "line": 21,
+          "endLine": 27,
           "column": 14,
           "endColumn": 21,
           "sourceFile": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx"
@@ -142,15 +145,15 @@
       }
     },
     {
-      "id": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx:74:14-to-src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
+      "id": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx:65:14-to-src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "source": "src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "target": "src\\screens\\HyfixMainPageScreen\\HyfixMainPageScreen.tsx",
       "data": {
-        "viaRoute": "/hyfixu95mainu95page-1-white-homeu95v2",
+        "viaRoute": "/home",
         "trigger": {
-          "element": "<Link to=\"/hyfixu95mainu95page-1-white-homeu95v2\" className=\"flex-shrink-0\">\r\n                <img\r\n                  className=\"w-[120px] sm:w-[140px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\r\n                  alt=\"Final FILE HYFIX\"\r\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\r\n                />\r\n              </Link>",
-          "line": 74,
-          "endLine": 80,
+          "element": "<Link to=\"/home\" className=\"flex-shrink-0\">\r\n                <img\r\n                  className=\"w-[120px] sm:w-[140px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\r\n                  alt=\"Final FILE HYFIX\"\r\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\r\n                />\r\n              </Link>",
+          "line": 65,
+          "endLine": 71,
           "column": 14,
           "endColumn": 21,
           "sourceFile": "src\\screens\\HyfixMainPageScreen\\sections\\NavigationWrapperSection\\NavigationWrapperSection.tsx"

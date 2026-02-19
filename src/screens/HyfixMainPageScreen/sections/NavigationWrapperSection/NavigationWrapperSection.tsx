@@ -3,18 +3,9 @@ import { Button } from "../../../../components/ui/button";
 import { SectionDivider } from "../../../../components/ui/section-divider";
 
 const navigationItems = [
-  {
-    label: "Home",
-    path: "/hyfixu95mainu95page-1-white-homeu95v2",
-  },
-  {
-    label: "About",
-    path: "/hyfixu95mainu95page-1-white-about",
-  },
-  {
-    label: "Applications",
-    path: "/hyfixu95mainu95page-1-white-application",
-  },
+  { label: "Home", path: "/home" },
+  { label: "About", path: "/about" },
+  { label: "Applications", path: "/applications" },
 ];
 
 export const NavigationWrapperSection = (): JSX.Element => {
@@ -27,7 +18,7 @@ export const NavigationWrapperSection = (): JSX.Element => {
           <div className="hidden md:flex md:items-center md:justify-between h-full">
             {/* Logo - Left */}
             <div className="flex justify-start flex-shrink-0">
-              <Link to="/hyfixu95mainu95page-1-white-homeu95v2">
+              <Link to="/home">
                 <img
                   className="w-[140px] md:w-[160px] lg:w-[180px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
                   alt="Final FILE HYFIX"
@@ -71,7 +62,7 @@ export const NavigationWrapperSection = (): JSX.Element => {
           {/* Mobile Layout: logo + compact buttons on row 1; nav with About in the middle on row 2 */}
           <div className="flex md:hidden flex-col gap-3 w-full min-w-0">
             <div className="flex items-center justify-between gap-2">
-              <Link to="/hyfixu95mainu95page-1-white-homeu95v2" className="flex-shrink-0">
+              <Link to="/home" className="flex-shrink-0">
                 <img
                   className="w-[120px] sm:w-[140px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
                   alt="Final FILE HYFIX"

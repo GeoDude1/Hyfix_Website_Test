@@ -68,7 +68,7 @@ export const HyfixBrandingSection = (): JSX.Element => {
           </div>
 
           {/* Button centered below */}
-          <Link to="/hyfixu95mainu95page-1-white-about">
+          <Link to="/about">
             <Button 
               className="h-auto px-4 md:px-5 py-[6px] rounded-[5px] border border-[#43aaff] bg-[linear-gradient(180deg,rgba(98,183,243,1)_0%,rgba(32,122,219,1)_100%)] [font-family:'Goli-Medium',Helvetica] font-medium text-white text-base md:text-lg tracking-[0] leading-[normal] hover:opacity-90 transition-opacity"
             >
