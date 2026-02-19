@@ -1,10 +1,10 @@
 export const HeroImageSection = (): JSX.Element => {
   return (
     <section className="relative w-full overflow-hidden">
-      {/* Video Container */}
-      <div className="relative w-full bg-transparent" style={{ paddingTop: '56.25%' }}>
+      {/* Desktop: transparent so circuit shows through. Mobile: #f5f6f8 so iOS doesn't show black when alpha isn't composited. */}
+      <div className="relative w-full bg-[#f5f6f8] md:bg-transparent" style={{ paddingTop: '56.25%' }}>
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover translate-y-[-1rem] bg-transparent"
+          className="absolute top-0 left-0 w-full h-full object-cover translate-y-[-1rem] bg-[#f5f6f8] md:bg-transparent"
           autoPlay
           loop
           muted
