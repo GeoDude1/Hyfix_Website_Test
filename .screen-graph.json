@@ -52,7 +52,7 @@
       "data": {
         "viaRoute": "/hyfixu95mainu95page-1-white-homeu95v2",
         "trigger": {
-          "element": "<Link to=\"/hyfixu95mainu95page-1-white-homeu95v2\">\n                <img\n                  className=\"w-[140px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\n                  alt=\"Final FILE HYFIX\"\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\n                />\n              </Link>",
+          "element": "<Link to=\"/hyfixu95mainu95page-1-white-homeu95v2\" className=\"flex-shrink-0\">\n                <img\n                  className=\"w-[120px] sm:w-[140px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\n                  alt=\"Final FILE HYFIX\"\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\n                />\n              </Link>",
           "line": 74,
           "endLine": 80,
           "column": 14,
@@ -116,7 +116,7 @@
       "data": {
         "viaRoute": "/hyfixu95mainu95page-1-white-homeu95v2",
         "trigger": {
-          "element": "<Link to=\"/hyfixu95mainu95page-1-white-homeu95v2\">\n                <img\n                  className=\"w-[140px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\n                  alt=\"Final FILE HYFIX\"\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\n                />\n              </Link>",
+          "element": "<Link to=\"/hyfixu95mainu95page-1-white-homeu95v2\" className=\"flex-shrink-0\">\n                <img\n                  className=\"w-[120px] sm:w-[140px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\n                  alt=\"Final FILE HYFIX\"\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\n                />\n              </Link>",
           "line": 74,
           "endLine": 80,
           "column": 14,
@@ -148,7 +148,7 @@
       "data": {
         "viaRoute": "/hyfixu95mainu95page-1-white-homeu95v2",
         "trigger": {
-          "element": "<Link to=\"/hyfixu95mainu95page-1-white-homeu95v2\">\n                <img\n                  className=\"w-[140px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\n                  alt=\"Final FILE HYFIX\"\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\n                />\n              </Link>",
+          "element": "<Link to=\"/hyfixu95mainu95page-1-white-homeu95v2\" className=\"flex-shrink-0\">\n                <img\n                  className=\"w-[120px] sm:w-[140px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity\"\n                  alt=\"Final FILE HYFIX\"\n                  src=\"https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png\"\n                />\n              </Link>",
           "line": 74,
           "endLine": 80,
           "column": 14,
