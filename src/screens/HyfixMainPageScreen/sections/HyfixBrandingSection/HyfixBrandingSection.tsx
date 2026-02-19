@@ -49,7 +49,7 @@ export const HyfixBrandingSection = (): JSX.Element => {
               <img
                 className="w-full max-w-[260px] sm:max-w-[300px] md:max-w-[380px] lg:max-w-[480px] h-auto object-contain"
                 alt="HYFIX building"
-                src="https://c.animaapp.com/mlqxi4snA5QXFn/img/images.png"
+                src={`${import.meta.env.BASE_URL}building.png`}
               />
             </div>
 
