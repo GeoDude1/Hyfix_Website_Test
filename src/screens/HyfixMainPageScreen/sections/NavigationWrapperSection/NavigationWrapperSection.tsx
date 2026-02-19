@@ -68,43 +68,46 @@ export const NavigationWrapperSection = (): JSX.Element => {
             </div>
           </div>
 
-          {/* Mobile Layout */}
-          <div className="flex md:hidden flex-col gap-3">
-            <div className="flex items-center justify-between">
-              <Link to="/hyfixu95mainu95page-1-white-homeu95v2">
+          {/* Mobile Layout: logo + compact buttons on row 1; nav with About in the middle on row 2 */}
+          <div className="flex md:hidden flex-col gap-3 w-full min-w-0">
+            <div className="flex items-center justify-between gap-2">
+              <Link to="/hyfixu95mainu95page-1-white-homeu95v2" className="flex-shrink-0">
                 <img
-                  className="w-[140px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
+                  className="w-[120px] sm:w-[140px] h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
                   alt="Final FILE HYFIX"
                   src="https://c.animaapp.com/mlqxi4snA5QXFn/img/final-file-hyfix-black-bold-bottom-text-1-5.png"
                 />
               </Link>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5 flex-shrink-0">
                 <Button
-                  className="h-auto px-2 py-[5px] rounded-[5px] border border-solid border-[#43aaff] bg-[linear-gradient(180deg,rgba(98,183,243,1)_0%,rgba(32,122,219,1)_100%)] [font-family:'Goli-Medium',Helvetica] font-medium text-white text-xs tracking-[0] leading-[normal]"
+                  className="h-auto px-2 py-1.5 rounded-[5px] border border-solid border-[#43aaff] bg-[linear-gradient(180deg,rgba(98,183,243,1)_0%,rgba(32,122,219,1)_100%)] [font-family:'Goli-Medium',Helvetica] font-medium text-white text-[11px] sm:text-xs tracking-[0] leading-tight"
                   onClick={() => window.open("https://store.geodnet.com", "_blank")}
                 >
                   GEODNET Store
                 </Button>
                 <Button
-                  className="h-auto px-2 py-[5px] rounded-[5px] border border-solid border-[#43aaff] bg-[linear-gradient(180deg,rgba(98,183,243,1)_0%,rgba(32,122,219,1)_100%)] [font-family:'Goli-Medium',Helvetica] font-medium text-white text-xs tracking-[0] leading-[normal]"
+                  className="h-auto px-2 py-1.5 rounded-[5px] border border-solid border-[#43aaff] bg-[linear-gradient(180deg,rgba(98,183,243,1)_0%,rgba(32,122,219,1)_100%)] [font-family:'Goli-Medium',Helvetica] font-medium text-white text-[11px] sm:text-xs tracking-[0] leading-tight"
                   onClick={() => window.location.href = "mailto:info@hyfix.ai?subject=Contact%20Us"}
                 >
                   Contact Us
                 </Button>
               </div>
             </div>
-            <div className="flex items-center justify-center gap-6 sm:gap-8 pb-2">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.label}
-                  to={item.path}
-                  className={`min-h-[44px] min-w-[44px] flex items-center justify-center py-2 px-1 [font-family:'Goli-Medium',Helvetica] text-sm tracking-[0] leading-[normal] transition-all hover:text-[#43aaff] cursor-pointer ${
-                    location.pathname === item.path ? "font-bold text-black" : "font-medium text-black"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
+            {/* Nav: row spans full width of container so 50% is true center */}
+            <div className="relative -mx-4 sm:-mx-6 w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] min-h-[44px] pb-2">
+              <div className="absolute left-1/2 top-0 flex -translate-x-1/2 items-center gap-6">
+                {navigationItems.map((item) => (
+                  <Link
+                    key={item.label}
+                    to={item.path}
+                    className={`min-h-[44px] flex items-center py-2 px-1 whitespace-nowrap [font-family:'Goli-Medium',Helvetica] text-sm tracking-[0] leading-[normal] transition-all hover:text-[#43aaff] cursor-pointer ${
+                      location.pathname === item.path ? "font-bold text-black" : "font-medium text-black"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>

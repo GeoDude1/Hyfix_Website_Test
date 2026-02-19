@@ -4,12 +4,14 @@ export const HeroImageSection = (): JSX.Element => {
       {/* Video Container */}
       <div className="relative w-full bg-transparent" style={{ paddingTop: '56.25%' }}>
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover translate-y-[-1rem]"
+          className="absolute top-0 left-0 w-full h-full object-cover translate-y-[-1rem] bg-transparent"
           autoPlay
           loop
           muted
           playsInline
+          preload="auto"
         >
+          {/* Transparent: WebM (VP9+alpha) for Chrome/Firefox/Edge; .mov (with alpha) fallback for Safari/iOS. */}
           <source src={`${import.meta.env.BASE_URL}drone-seethrough-02-1.webm`} type="video/webm" />
           <source src={`${import.meta.env.BASE_URL}drone-seethrough-02-1.mov`} type="video/quicktime" />
         </video>
