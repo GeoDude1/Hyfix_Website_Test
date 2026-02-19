@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { HyfixMainPage } from "./screens/HyfixMainPage";
 import { HyfixMainPageScreen } from "./screens/HyfixMainPageScreen";
 import { HyfixMainPageWrapper } from "./screens/HyfixMainPageWrapper/HyfixMainPageWrapper";
@@ -7,7 +7,7 @@ const router = createBrowserRouter(
   [
     {
       path: "/",
-      element: <HyfixMainPageScreen />,
+      element: <Navigate to="/home" replace />,
     },
     {
       path: "/home",
