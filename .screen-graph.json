@@ -4,10 +4,8 @@
       "id": "src/screens/HyfixMainPageScreen/HyfixMainPageScreen.tsx",
       "label": "HyfixMainPageScreen",
       "routes": [
-        "/",
         "/home",
-        "/*",
-        "/hyfixu95mainu95page-1-white-homeu95v2"
+        "/*"
       ],
       "dataModelId": "264:35",
       "isRoot": true
@@ -16,8 +14,7 @@
       "id": "src/screens/HyfixMainPageWrapper/HyfixMainPageWrapper.tsx",
       "label": "HyfixMainPageWrapper",
       "routes": [
-        "/about",
-        "/hyfixu95mainu95page-1-white-about"
+        "/about"
       ],
       "dataModelId": "207:420"
     },
@@ -25,8 +22,7 @@
       "id": "src/screens/HyfixMainPage/HyfixMainPage.tsx",
       "label": "HyfixMainPage",
       "routes": [
-        "/applications",
-        "/hyfixu95mainu95page-1-white-application"
+        "/applications"
       ],
       "dataModelId": "209:7"
     }

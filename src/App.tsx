@@ -25,18 +25,18 @@ const router = createBrowserRouter(
       path: "/*",
       element: <HyfixMainPageScreen />,
     },
-    // Legacy paths (redirects / backwards compatibility)
+    // Legacy paths – redirect to clean URLs so the address bar shows /home, /about, /applications
     {
       path: "/hyfixu95mainu95page-1-white-application",
-      element: <HyfixMainPage />,
+      element: <Navigate to="/applications" replace />,
     },
     {
       path: "/hyfixu95mainu95page-1-white-homeu95v2",
-      element: <HyfixMainPageScreen />,
+      element: <Navigate to="/home" replace />,
     },
     {
       path: "/hyfixu95mainu95page-1-white-about",
-      element: <HyfixMainPageWrapper />,
+      element: <Navigate to="/about" replace />,
     },
   ],
   { basename: import.meta.env.BASE_URL.replace(/\/$/, "") }
