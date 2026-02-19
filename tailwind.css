@@ -11,52 +11,37 @@
   --animate-spin: spin 1s linear infinite;
 }
 
-/* Remove default margins that cause gaps (especially on mobile) */
+/* Remove default margins that cause gaps */
 html, body {
   margin: 0;
   padding: 0;
 }
 
-/* Background: full bleed on desktop and mobile */
+/* Background: full bleed – html and body fill viewport so no dark/white edges show */
 html {
   min-height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
   height: 100%;
+  width: 100%;
   overflow-x: hidden;
-  background-color: #f5f6f8;
-  background-image: url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1.png);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-color: transparent !important;
 }
 body {
   min-height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #f5f6f8;
+  background-color: transparent !important;
   position: relative;
-  background-image: url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1.png);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 /* Fixed background layer – backup so background always shows (desktop + mobile) */
 body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  background-color: #f5f6f8;
-  background-image: url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1.png);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  transform: translateZ(0);
+  display: none !important;
 }
-/* Mobile: follow best practices – no fixed attachment, cover + scroll, full viewport, no margin gaps */
+/* Mobile: background scrolls with page so it always reaches the bottom, no extra buffer (avoids “stuck” feel) */
 @media (max-width: 1024px) {
   html {
     min-height: 100%;
@@ -70,25 +55,18 @@ body::before {
     background-size: cover;
     background-color: #f5f6f8;
   }
-  body::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: -50vh;
-    min-height: calc(100% + 50vh);
-    width: 100%;
-    background-size: cover;
-    background-attachment: scroll;
-  }
 }
-/* In-app full-bleed background layer – real DOM element so it never leaves a white strip at the bottom */
+
+/* Full-bleed background layer – outside #app so it’s always the bottom layer; covers viewport and beyond */
 .page-backdrop {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  min-height: 300vh;
+  bottom: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: 200vh;
   z-index: -1;
   background-color: #f5f6f8;
   background-image: url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1.png);
@@ -99,18 +77,33 @@ body::before {
 }
 @media (max-width: 1024px) {
   .page-backdrop {
-    min-height: 400vh;
+    height: 250vh;
+    min-height: 250dvh;
   }
 }
 
+/* Extra block at bottom of body – same as page background so no white “extra section” (see end of file for !important override) */
+/* App shell and main must stay transparent so page background stretches to bottom – no white box */
 #app {
   position: relative;
   width: 100%;
   min-height: 100%;
-  padding-bottom: max(2rem, env(safe-area-inset-bottom, 1rem));
+  padding-bottom: env(safe-area-inset-bottom, 0);
   overflow-x: hidden;
   overflow-y: visible;
-  background: transparent;
+  background: transparent !important;
+}
+#app > div {
+  background: transparent !important;
+}
+main {
+  background: transparent !important;
+}
+footer {
+  background: transparent !important;
+}
+footer .container {
+  background: transparent !important;
 }
 
 .animate-fade-in {
@@ -363,11 +356,13 @@ body::before {
   }
 }
 
-/* Override any white from Tailwind base so the page background always shows to the bottom */
+/* Body transparent so .page-backdrop (circuit image) shows through */
 body {
-  background-color: #f5f6f8 !important;
-  background-image: url(https://c.animaapp.com/mlqxi4snA5QXFn/img/hyfix-website-layout-white-bg-01-1.png) !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Bottom fill must use same background so the “extra section” is not white */
+body::after {
+  display: none !important;
 }
