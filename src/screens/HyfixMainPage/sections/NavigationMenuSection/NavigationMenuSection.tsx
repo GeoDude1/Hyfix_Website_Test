@@ -46,7 +46,7 @@ export const NavigationMenuSection = (): JSX.Element => {
             <div className="flex items-center justify-end gap-2 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
               <Button 
                 className="h-8 px-4 py-[5px] rounded-[5px] border border-[#43aaff] bg-[linear-gradient(180deg,rgba(98,183,243,1)_0%,rgba(32,122,219,1)_100%)] [font-family:'Goli-Medium',Helvetica] font-medium text-white text-sm tracking-[0] leading-[normal] transition-[transform,box-shadow] hover:scale-105 hover:shadow-lg"
-                onClick={() => window.open("https://store.geodnet.com", "_blank")}
+                onClick={() => window.open("https://geodnet.com/product#list", "_blank")}
               >
                 GEODNET Store
               </Button>

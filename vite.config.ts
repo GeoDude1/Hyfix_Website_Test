@@ -28,7 +28,7 @@ export default defineConfig(({ mode }) => ({
     copyIndexTo404(),
   ],
   publicDir: "./static",
-  base: "/Hyfix_Website_Test/",
+  base: "/",
   css: {
     postcss: {
       plugins: [tailwind()],
