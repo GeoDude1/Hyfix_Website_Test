@@ -4,8 +4,8 @@ import { SectionDivider } from "../../../../components/ui/section-divider";
 
 const navigationItems = [
   { label: "Home", path: "/home" },
-  { label: "About", path: "/about" },
   { label: "Applications", path: "/applications" },
+  { label: "About", path: "/about" },
 ];
 
 export const ContentDividerSection = (): JSX.Element => {
