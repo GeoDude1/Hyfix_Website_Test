@@ -52,7 +52,7 @@ export const NavigationWrapperSection = (): JSX.Element => {
               </Button>
               <Button
                 className="h-auto flex items-center justify-center gap-2.5 px-2 md:px-3 lg:px-4 py-[5px] rounded-[5px] border border-solid border-[#43aaff] bg-[linear-gradient(180deg,rgba(98,183,243,1)_0%,rgba(32,122,219,1)_100%)] [font-family:'Goli-Medium',Helvetica] font-medium text-white text-xs md:text-sm tracking-[0] leading-[normal] transition-[transform,box-shadow] hover:scale-105 hover:shadow-lg"
-                onClick={() => window.location.href = "mailto:info@hyfix.ai?subject=Contact%20Us"}
+                onClick={() => window.open("https://share-na2.hsforms.com/2liB_rdDiRCWFkfQpIporQwee4rg", "_blank")}
               >
                 Contact Us
               </Button>
@@ -78,7 +78,7 @@ export const NavigationWrapperSection = (): JSX.Element => {
                 </Button>
                 <Button
                   className="h-auto px-2 py-1.5 rounded-[5px] border border-solid border-[#43aaff] bg-[linear-gradient(180deg,rgba(98,183,243,1)_0%,rgba(32,122,219,1)_100%)] [font-family:'Goli-Medium',Helvetica] font-medium text-white text-[11px] sm:text-xs tracking-[0] leading-tight"
-                  onClick={() => window.location.href = "mailto:info@hyfix.ai?subject=Contact%20Us"}
+                  onClick={() => window.open("https://share-na2.hsforms.com/2liB_rdDiRCWFkfQpIporQwee4rg", "_blank")}
                 >
                   Contact Us
                 </Button>

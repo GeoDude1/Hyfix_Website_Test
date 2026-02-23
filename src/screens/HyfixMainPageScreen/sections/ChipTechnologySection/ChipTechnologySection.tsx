@@ -71,7 +71,7 @@ export const ChipTechnologySection = (): JSX.Element => {
             {/* Button centered below */}
             <Button 
               className="h-auto px-4 md:px-5 py-[6px] rounded-[5px] border border-[#43aaff] bg-[linear-gradient(180deg,rgba(98,183,243,1)_0%,rgba(32,122,219,1)_100%)] [font-family:'Goli-Medium',Helvetica] font-medium text-white text-base md:text-lg tracking-[0] leading-normal hover:opacity-90 transition-opacity"
-              onClick={() => window.location.href = "mailto:info@hyfix.ai?subject=Request%20Info"}
+              onClick={() => window.open("https://share-na2.hsforms.com/2liB_rdDiRCWFkfQpIporQwee4rg", "_blank")}
             >
               Request Info
             </Button>

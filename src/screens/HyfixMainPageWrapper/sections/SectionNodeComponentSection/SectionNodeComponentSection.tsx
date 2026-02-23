@@ -10,9 +10,9 @@ const socialLinks = [
 ];
 
 const legalLinks = [
-  { name: "Terms & Conditions", url: "#" },
-  { name: "Privacy Policy", url: "#" },
-  { name: "Refund Policy", url: "#" },
+  { name: "Terms & Conditions", url: "https://cdn.shopify.com/s/files/1/0617/8360/5461/files/HYFIX_Terms_Conditions_2025.pdf?v=1765307120" },
+  { name: "Privacy Policy", url: "https://cdn.shopify.com/s/files/1/0617/8360/5461/files/GEODNET_HYFIX_Privacy_Policy_8f4c53f1-3980-4f64-9bbe-4af146dde45a.pdf?v=1761165629" },
+  { name: "Refund Policy", url: "https://cdn.shopify.com/s/files/1/0617/8360/5461/files/HYFIX_Return_Policy_Nov_2025.pdf?v=1763068073" },
 ];
 
 export const SectionNodeComponentSection = (): JSX.Element => {
@@ -53,6 +53,7 @@ const LogoAndCTA = (): JSX.Element => {
         <Button
           variant="outline"
           className="h-auto px-[35px] py-[7px] rounded-[5px] border-black hover:bg-black hover:text-white transition-colors"
+          onClick={() => window.open("https://share-na2.hsforms.com/2liB_rdDiRCWFkfQpIporQwee4rg", "_blank")}
         >
           <span className="[font-family:'Goli-Medium',Helvetica] font-medium text-[17px] tracking-[0] leading-[normal]">
             Contact Us
@@ -90,9 +91,9 @@ const SocialRow = (): JSX.Element => {
 const LegalRow = (): JSX.Element => {
   const { ref, inView } = useInView({ threshold: 0.2 });
   const legalLinks = [
-    { name: "Terms & Conditions", url: "#" },
-    { name: "Privacy Policy", url: "#" },
-    { name: "Refund Policy", url: "#" },
+    { name: "Terms & Conditions", url: "https://cdn.shopify.com/s/files/1/0617/8360/5461/files/HYFIX_Terms_Conditions_2025.pdf?v=1765307120" },
+    { name: "Privacy Policy", url: "https://cdn.shopify.com/s/files/1/0617/8360/5461/files/GEODNET_HYFIX_Privacy_Policy_8f4c53f1-3980-4f64-9bbe-4af146dde45a.pdf?v=1761165629" },
+    { name: "Refund Policy", url: "https://cdn.shopify.com/s/files/1/0617/8360/5461/files/HYFIX_Return_Policy_Nov_2025.pdf?v=1763068073" },
   ];
 
   return (
@@ -100,7 +101,7 @@ const LegalRow = (): JSX.Element => {
       {legalLinks.map((link, index) => (
         <span key={link.name} className="flex items-center gap-2">
           {index > 0 && <span className="text-gray-400 select-none">|</span>}
-          <a href={link.url} className="hover:underline transition-all">
+          <a href={link.url} target="_blank" rel="noopener noreferrer" className="hover:underline transition-all" onClick={(e) => { e.preventDefault(); window.open(link.url, "_blank", "noopener,noreferrer"); }}>
             {link.name}
           </a>
         </span>
