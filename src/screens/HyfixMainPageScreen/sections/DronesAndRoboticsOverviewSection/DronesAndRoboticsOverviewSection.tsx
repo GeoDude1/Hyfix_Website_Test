@@ -31,7 +31,7 @@ export const DronesAndRoboticsOverviewSection = (): JSX.Element => {
           </div>
         </div>
 
-        <h2 className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] [font-family:'Hind',Helvetica] font-bold text-black text-lg sm:text-xl md:text-2xl text-center tracking-[0] leading-[normal] mb-4 px-4">
+        <h2 className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] [font-family:'Hind',Helvetica] font-bold text-black text-xl md:text-2xl lg:text-3xl text-center tracking-[0] leading-[normal] mb-4 px-4">
           Enabling an Entire Generation of Drones and Robots
         </h2>
 
@@ -48,7 +48,7 @@ export const DronesAndRoboticsOverviewSection = (): JSX.Element => {
                   src={category.image}
                 />
               </div>
-              <p className="[font-family:'Hind',Helvetica] font-medium text-black text-sm md:text-base text-center tracking-[0] leading-[1.3] mt-2">
+              <p className="[font-family:'Hind',Helvetica] font-medium text-black text-base md:text-lg text-center tracking-[0] leading-[1.3]" style={{ marginTop: "0.125rem" }}>
                 {category.title}
               </p>
             </div>

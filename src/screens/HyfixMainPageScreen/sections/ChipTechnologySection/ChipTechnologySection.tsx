@@ -50,7 +50,7 @@ export const ChipTechnologySection = (): JSX.Element => {
                 <img
                   className="w-[200px] sm:w-[240px] md:w-[280px] h-auto object-contain"
                   alt="Chip dime"
-                  src="https://c.animaapp.com/mlqxi4snA5QXFn/img/h1-chip-dime-v04-1.png"
+                  src={`${import.meta.env.BASE_URL}H1_Chip-Dime_v05.png`}
                 />
               </div>
 

@@ -46,8 +46,8 @@ export const HeroImageSection = (): JSX.Element => {
               preload="auto"
               onEnded={(e) => e.currentTarget.pause()}
             >
-              <source src={`${import.meta.env.BASE_URL}drone_seethrough_08.webm`} type="video/webm" />
-              <source src={`${import.meta.env.BASE_URL}drone_seethrough_08-1.mov`} type="video/quicktime" />
+              <source src={`${import.meta.env.BASE_URL}drone_seethrough_09.webm`} type="video/webm" />
+              <source src={`${import.meta.env.BASE_URL}drone_seethrough_09-1.mov`} type="video/quicktime" />
             </video>
           </>
         )}
