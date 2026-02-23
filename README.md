@@ -29,3 +29,17 @@ If you are satisfied with the result, you can finally build the project for rele
 ```
 npm run build
 ```
+
+## Deployment (direct URLs like /about, /applications)
+
+This app is a single-page app (SPA). Visiting `https://yoursite.com/about` or `/applications` directly can show "Access Denied" or 404 if the host doesn't serve the app for those paths.
+
+**Fix:** Configure the host so that **all routes** (or 404/403 errors) serve `index.html`:
+
+- **AWS S3 (static site):** Bucket → Properties → Static website hosting → **Error document:** set to `index.html`.
+- **CloudFront:** Use a custom error response: HTTP 403 and 404 → respond with 200, body = `/index.html`.
+- **GitHub Pages:** The build outputs `404.html` (copy of `index.html`); GitHub Pages will serve it for unknown paths.
+- **nginx:** `try_files $uri $uri/ /index.html;`
+- **Vercel/Netlify:** Add a rewrite so `/*` → `/index.html`.
+
+After that, direct links and reloads on `/home`, `/about`, `/applications` will load the app correctly.

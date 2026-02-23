@@ -41,7 +41,7 @@ export const DronesAndRoboticsOverviewSection = (): JSX.Element => {
               key={index}
               className={`translate-y-[-1rem] animate-scale-in opacity-0 [--animation-delay:${400 + index * 100}ms] flex flex-col`}
             >
-              <div className="relative overflow-hidden bg-transparent h-[160px] md:h-[180px] lg:h-[200px] flex items-center justify-center cursor-pointer hover:scale-105 transition-all duration-300">
+              <div className="relative overflow-hidden bg-transparent h-[160px] md:h-[200px] lg:h-[280px] flex items-center justify-center cursor-pointer hover:scale-105 transition-all duration-300">
                 <img
                   className="w-full h-full object-contain"
                   alt={category.title}

@@ -20,12 +20,14 @@ export const NewsUpdatesSection = (): JSX.Element => {
           drones and autonomous robots
         </p>
 
-        <Button 
-          className="h-auto w-auto px-5 md:px-6 py-[6px] rounded-[5px] border border-solid border-[#43aaff] bg-[linear-gradient(180deg,rgba(98,183,243,1)_0%,rgba(32,122,219,1)_100%)] [font-family:'Goli-Medium',Helvetica] font-medium text-white text-base md:text-lg tracking-[0] leading-[normal] hover:opacity-90 transition-opacity translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]"
-          onClick={() => window.open("https://hyfix.ai/news", "_blank")}
-        >
-          Full News Release
-        </Button>
+        <span className="inline-block cursor-pointer transition-transform hover:scale-105 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
+          <Button 
+            className="h-auto w-auto px-5 md:px-6 py-[6px] rounded-[5px] border border-solid border-[#43aaff] bg-[linear-gradient(180deg,rgba(98,183,243,1)_0%,rgba(32,122,219,1)_100%)] [font-family:'Goli-Medium',Helvetica] font-medium text-white text-base md:text-lg tracking-[0] leading-[normal] hover:opacity-90 transition-opacity"
+            onClick={() => window.open("https://hyfix.ai/news", "_blank")}
+          >
+            Full News Release
+          </Button>
+        </span>
       </div>
     </section>
   );

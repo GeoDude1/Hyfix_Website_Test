@@ -8,20 +8,28 @@ function isIOS(): boolean {
   );
 }
 
+function isSafari(): boolean {
+  if (typeof navigator === "undefined") return false;
+  return (
+    /Safari\//.test(navigator.userAgent) &&
+    !/Chromium|Chrome|CriOS|FxiOS|Edg/.test(navigator.userAgent)
+  );
+}
+
 export const HeroImageSection = (): JSX.Element => {
-  const [ios, setIos] = useState(false);
+  const [useIframe, setUseIframe] = useState(false);
   useEffect(() => {
-    setIos(isIOS());
+    setUseIframe(isIOS() || isSafari());
   }, []);
 
   return (
     <section className="relative w-full overflow-hidden">
       <div
-        className={`relative w-full ${ios ? "translate-y-[-1rem]" : ""}`}
+        className={`relative w-full ${useIframe ? "translate-y-[-1rem]" : ""}`}
         style={{ paddingTop: "56.25%" }}
       >
-        {ios ? (
-          /* iOS: embed the same HTML that works in the test – video transparency shows correctly */
+        {useIframe ? (
+          /* iOS + Safari (macOS): iframe + MOV so video transparency renders correctly (no black background) */
           <iframe
             title="Hero video"
             src={`${import.meta.env.BASE_URL}video-hero-ios.html`}
@@ -33,13 +41,13 @@ export const HeroImageSection = (): JSX.Element => {
             <video
               className="absolute top-0 left-0 w-full h-full object-cover translate-y-[-1rem] bg-transparent"
               autoPlay
-              loop
               muted
               playsInline
               preload="auto"
+              onEnded={(e) => e.currentTarget.pause()}
             >
-              <source src={`${import.meta.env.BASE_URL}drone-seethrough-02-1.webm`} type="video/webm" />
-              <source src={`${import.meta.env.BASE_URL}drone_ios.mov`} type="video/quicktime" />
+              <source src={`${import.meta.env.BASE_URL}drone_seethrough_08.webm`} type="video/webm" />
+              <source src={`${import.meta.env.BASE_URL}drone_seethrough_08-1.mov`} type="video/quicktime" />
             </video>
           </>
         )}
