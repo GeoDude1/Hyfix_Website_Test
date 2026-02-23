@@ -107,7 +107,7 @@ export const ApplicationsIntroWrapperSection = (): JSX.Element => {
                     &quot;Whether you&apos;re building a palm-sized consumer drone or a heavy-lift autonomous system, the underlying problems are the same—power, precision, reliability, and security. We&apos;re giving builders a single silicon foundation that scales across use cases instead of forcing them to stitch together fragile systems from dozens of suppliers.&quot;
                   </p>
                   <footer className="[font-family:'Hind',Helvetica] text-black text-sm md:text-base">
-                    <span>Mike Horton, Co-Founder &amp; CEO, </span>
+                    <span>Mike Horton, CEO, </span>
                     <a
                       href="https://www.linkedin.com/in/mikeahorton/"
                       rel="noopener noreferrer"

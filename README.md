@@ -30,11 +30,25 @@ If you are satisfied with the result, you can finally build the project for rele
 npm run build
 ```
 
-## Deployment (direct URLs like /about, /applications)
+## Deployment (direct URLs: /home, /about, /applications)
 
-This app is a single-page app (SPA). Visiting `https://yoursite.com/about` or `/applications` directly can show "Access Denied" or 404 if the host doesn't serve the app for those paths.
+This app is a single-page app (SPA). Direct visits or refresh on `/home`, `/about`, or `/applications` only work if the server returns `index.html` for those paths.
 
-**Fix:** Configure the host so that **all routes** (or 404/403 errors) serve `index.html`:
+### Option 1: Node.js server (recommended)
+
+Use the included Node server so `/home`, `/about`, and `/applications` work when entered or refreshed:
+
+1. Build: `npm run build`
+2. Start: `npm start`
+
+The server runs on port 3000 (or set `PORT`). It serves files from `dist/` and sends `index.html` for any path that isn’t a file (e.g. `/about`), so the SPA router can handle it.
+
+- One command: `npm run preview` (builds then starts the server).
+- **Deploy:** Use a Node host (Heroku, Railway, Render, VPS, etc.) and run `npm run build && npm start`.
+
+### Option 2: Static hosting only
+
+If you deploy only the `dist/` folder (no Node), configure the host so 404/403 serve `index.html`:
 
 - **AWS S3 (static site):** Bucket → Properties → Static website hosting → **Error document:** set to `index.html`.
 - **CloudFront:** Use a custom error response: HTTP 403 and 404 → respond with 200, body = `/index.html`.
